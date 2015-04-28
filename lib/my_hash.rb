@@ -9,12 +9,13 @@ class MyHash
     @values.push(value)
     new_hash = [key,value]
     new_hash
-    #@my_hash.merge!(new_hash)
   end
-end  
 
-  #define_method(:myFetch) do |input|
-  #  if input.== (@key)
-  #  end
-  #end
-#end
+  define_method(:myFetch) do |key|
+   value_position = @keys.index(key)
+   @values[value_position]
+  end
+  define_method(:myKey?) do |key|
+    @keys.include?(key)
+  end  
+end
