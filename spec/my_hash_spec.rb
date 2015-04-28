@@ -37,5 +37,10 @@ end
   end
 end
   describe("myMerge") do
-    it("adds another key and value to the rspective arrays ")
+    it("adds another key and value to the end of their respective arrays") do
+      test_hash = MyHash.new()
+      test_hash.myStore("Kitten", "cute")
+      expect(test_hash.myMerge("dog","cute")).to(eq(["dog", "cute"]))
+  end
+end
 end

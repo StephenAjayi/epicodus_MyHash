@@ -25,4 +25,10 @@ class MyHash
     @keys.size().==(@values.size())
     @keys.size()
   end
+  define_method(:myMerge) do |key, value|
+    @keys.push(key)
+    @values.push(value)
+    new_hash = [key, value]
+    new_hash
+  end
 end
