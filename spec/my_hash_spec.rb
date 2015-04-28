@@ -5,7 +5,6 @@ describe(MyHash) do
   describe("#myStore") do
     it("stores the key and value into a hash") do
       test_hash = MyHash.new()
-      #test_hash.myStore("kitten", "cute")
       expect(test_hash.myStore("kitten", "cute")).to(eq(["kitten", "cute"]))
     end
   end
@@ -23,9 +22,20 @@ describe(MyHash) do
     expect(test_hash.myKey?("kitten")).to(eq(true))
   end
 end
+  describe("myValue?") do
+    it("checks to see if s value us included in a group of values") do
+      test_hash = MyHash.new()
+      test_hash.myStore("kitten", "cute")
+      expect(test_hash.myValue?("cute")).to(eq(true))
+  end
 end
-
-
-
-  #  describe("#has_key?") do
-  #    it("")
+  describe("myLength") do
+    it("checks the length of both keys and values arrays") do
+      test_hash = MyHash.new()
+      test_hash.myStore("kitten", "cute")
+      expect(test_hash.mylength()).to(eq(1))
+  end
+end
+  describe("myMerge") do
+    it("adds another key and value to the rspective arrays ")
+end

@@ -17,5 +17,12 @@ class MyHash
   end
   define_method(:myKey?) do |key|
     @keys.include?(key)
-  end  
+  end
+  define_method (:myValue?) do |value|
+    @values.include?(value)
+  end
+  define_method(:mylength) do
+    @keys.size().==(@values.size())
+    @keys.size()
+  end
 end
